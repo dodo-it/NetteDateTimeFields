@@ -17,7 +17,7 @@
 	},
     "autoload": {
         "psr-4": {
-            "NetteDateTimeFields\\": "src/NettePropelDateTimeFields"
+            "NetteDateTimeFields\\": "src/NetteDateTimeFields"
         }
     }
 }
