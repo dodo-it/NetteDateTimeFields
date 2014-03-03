@@ -2,6 +2,8 @@
 
 namespace NetteDateTimeFields;
 
+use NetteDateTimeFields\Controls;
+
 use Nette\DI;
 use Nette\PhpGenerator;
 use Nette\Forms\Container;
@@ -29,13 +31,13 @@ class DateTimeFormExtension extends DI\CompilerExtension
     
     public static function register() {
         Container::extensionMethod('addDate', function (Container $container, $name, $label = NULL, $format = NULL, $html5 = FALSE) {
-            return $container[$name] = new DateInput($label, $format, $html5);
+            return $container[$name] = new Controls\DateInput($label, $format, $html5);
         });
         Container::extensionMethod('addTime', function (Container $container, $name, $label = NULL, $format = NULL, $html5 = FALSE) {
-            return $container[$name] = new TimeInput($label, $format, $html5);
+            return $container[$name] = new Controls\TimeInput($label, $format, $html5);
         });
         Container::extensionMethod('addDateTime', function (Container $container, $name, $label = NULL, $dateFormat = NULL, $timeFormat = NULL, $separator = NULL, $html5 = FALSE) {
-            return $container[$name] = new DateTimeInput($label, $dateFormat, $timeFormat, $separator, $html5);
+            return $container[$name] = new Controls\DateTimeInput($label, $dateFormat, $timeFormat, $separator, $html5);
         });
     }
 }
