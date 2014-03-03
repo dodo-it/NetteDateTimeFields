@@ -19,5 +19,5 @@
         "psr-4": {
             "NetteDateTimeFields\\": "src/NettePropelDateTimeFields"
         }
-    },
+    }
 }
