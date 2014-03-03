@@ -1,0 +1,16 @@
+{
+	"name": "livioribeiro/nette-datetimefields",
+	"description": "Form component that provides automatic conversion to DateTime objects.",
+	"type": "library",
+	"license": ["BSD-3-Clause"],
+	"authors": [
+		{
+			"name": "Livio Ribeiro",
+			"homepage": "http://github.com/livioribeiro"
+		}
+	],
+	"require": {
+		"php": ">= 5.4.0",
+		"nette/nette": ">= 2.0.0"
+	}
+}
