@@ -21,9 +21,10 @@ abstract class DateTimeBase extends Forms\Controls\BaseControl {
     const W3C_DATE_FORMAT = 'Y-m-d';
     const W3C_TIME_FORMAT = 'H:i';
     const W3C_DATETIME_FORMAT = 'Y-m-dHi';
-    const DEFAULT_DATE_FORMAT = 'Y-m-d';
+    
+    const DEFAULT_DATE_FORMAT = 'd/m/Y';
     const DEFAULT_TIME_FORMAT = 'H:i';
-    const DEFAULT_SEPARATOR = '';
+    const DEFAULT_SEPARATOR = ' ';
 
     /** @var     string            value entered by user (unfiltered) */
     protected $rawValue;
@@ -134,7 +135,7 @@ abstract class DateTimeBase extends Forms\Controls\BaseControl {
             throw new \InvalidArgumentException();
         }
 
-        if ($this->value !== NULL) {
+        if ($this->value) {
             $this->rawValue = $this->value->format($this->format);
         }
 
