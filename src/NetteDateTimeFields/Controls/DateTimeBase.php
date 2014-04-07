@@ -58,13 +58,20 @@ abstract class DateTimeBase extends Forms\Controls\BaseControl {
 
         if ($this->html5) {
             list($min, $max) = $this->extractRangeRule($this->getRules());
-            if ($min !== NULL)
+            
+            if ($min !== NULL) {
                 $control->min = $min->format($this->w3format);
-            if ($max !== NULL)
+            }
+            if ($max !== NULL) {
                 $control->max = $max->format($this->w3format);
+            }
         }
-        if ($this->value)
+        
+        if ($this->value) {
             $control->value = $this->value->format($this->format);
+            $control->addAttributes(array('data-format' => $this->format));
+        }
+        
         return $control;
     }
 
