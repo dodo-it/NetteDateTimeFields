@@ -67,9 +67,12 @@ abstract class DateTimeBase extends Forms\Controls\BaseControl {
             }
         }
         
+        if (!$this->html5) {
+            $control->addAttributes(array('data-format' => $this->format));
+        }
+        
         if ($this->value) {
             $control->value = $this->value->format($this->format);
-            $control->addAttributes(array('data-format' => $this->format));
         }
         
         return $control;
