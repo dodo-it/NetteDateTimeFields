@@ -127,7 +127,7 @@ abstract class DateTimeBase extends Forms\Controls\BaseControl {
      * @return   self
      */
     public function setValue($value) {
-        if ($value instanceof DateTime) {
+        if ($value instanceof \DateTimeImmutable) {
             $this->value = $value;
         } elseif (is_int($value)) { // timestamp
             $datetime = new DateTime();
